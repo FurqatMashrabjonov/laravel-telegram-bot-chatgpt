@@ -73,6 +73,8 @@ class WebhookHandler extends EmptyWebhookHandler
                         ->row([
                             ReplyButton::make('Apini yangilash🔁'),
                             ReplyButton::make('Kanal qo\'shish➕'),
+                        ]) ->row([
+                            ReplyButton::make('Admin Panel')->webApp('https://furqat.me/admin'),
                         ])->resize())->send();
             } else {
                 $this->chat->html(ConstantTexts::INTRO)->send();
